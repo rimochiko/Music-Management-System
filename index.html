@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>年糕の音乐收藏</title>
+<style type="text/css">
+*
+{
+	padding:0;
+	margin:0;
+	font-family:"微软雅黑";
+	color:#383835;
+}
+body
+{
+	background:#fff;
+}
+h1
+{
+	margin:2%;
+	padding:10px;
+	background:#eee;
+	color:#383835;
+	border-radius:10px;
+	font-size:24px;
+}
+.options
+{
+	margin:2%;
+	width:700px;
+	padding:10px;
+}
+.options label
+{
+	width: 80px;
+	height:40px;
+	display:inline-block;
+}
+
+.options input[type="text"],.options input[type="date"]
+{
+	width:150px;
+	height:16px;
+	padding:4px;
+	outline:none;
+	margin-right:40px;
+}
+
+.options select
+{
+	appearance:none;
+	outline:none;
+	width:162px;
+	height:28px;
+	padding:4px;
+	margin-right:40px;
+}
+
+.options input[type="button"]
+{
+	width:120px;
+	height:30px;
+	margin-right:40px;
+	margin-bottom: 10px;
+}
+
+table
+{
+	margin:1% 2%;
+}
+
+table th
+{
+	background:#eee;
+}
+
+table th,table td
+{
+	padding:6px 10px;
+	border-radius:4px;
+}
+
+table input[type="button"]
+{
+	width:120px;
+	height:30px;
+}
+
+table img
+{
+	width: 64px;
+	height: 64px;
+}
+
+table #updateId
+{
+	width: 40px;
+	height:16px;
+	padding:4px;
+}
+
+table input[type="text"]
+{
+	width: 80px;
+	height:16px;
+	padding:4px;
+}
+
+table input[type="date"]
+{
+	width: 120px;
+	height:16px;
+	padding:4px;
+}
+
+table select
+{
+	appearance:none;
+	outline:none;
+	height:28px;
+	padding:4px;
+}
+
+#h1_title span
+{
+	margin-left: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<h1>年糕の音乐收藏</h1>
+<form class="options" enctype="multipart/form-data" id="form">
+	<label>音乐编号</label><input type="text" name="id" id="ip_id"/>
+	<label>音乐标题</label><input type="text" name="title" id="ip_title"/><br />
+	<label>艺术家</label><input type="text" name="artist" id="ip_artist"/>
+    <label>发布日期</label><input type="date" name="date" id="ip_date"/><br />
+    <label>收录专辑</label><input type="text" name="album" id="ip_album"/>
+    <label>风格流派</label><select id="slt_style" name="style">
+    	<option value=''>请选择</option>
+        <option>流行</option>
+    	<option>电音</option>
+    	<option>摇滚</option>
+        <option>蓝调</option>
+    </select><br />
+    <label>专辑封面</label><input type="file" id="ip_image" name="image"/><br/>
+    <input type="button" id="btn_check" onclick="Find()" value="检索"/>
+    <input type="button" id="btn_add" onclick="Add()" value="新增"/><br/>
+    <span>温馨提示：</span><span id="tip">编号，标题，艺术家为必填项。</span>
+</form>
+
+<h1 id="h1_title">全部收藏<span></span></h1>
+<form id="updateForm" enctype="multipart/form-data">
+<table class="result" id="result" border="2" bordercolor="#FFFFFF">
+<!-- 	<th>编号</th>
+    <th>标题</th>
+    <th>艺术家</th>
+    <th>发布日期</th>
+    <th>专辑</th>
+    <th>风格</th>
+<th>封面</th>
+    <th>编辑</th>
+    <th>删除</th> 
+
+     <tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td><input type="button" onclick="Update(0)"></td>
+<td></td>
+</tr> -->
+</table>
+</form>
+</div>
+
+<script src="js.js"></script>
+</body>
+</html>
+
+
+			
